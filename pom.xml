@@ -419,6 +419,30 @@
                     </plugin>
                 </plugins>
             </build>
+            <build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.7</version>
+            <executions>
+                <execution>
+                    <id>cobertura</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>cobertura</goal>
+                    </goals>
+                    <configuration>
+                        <formats>
+                            <format>xml</format>
+                            <format>html</format>
+                        </formats>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
             <reporting>
                 <plugins>
                     <plugin>
@@ -430,6 +454,7 @@
                                 <format>html</format>
                                 <format>xml</format>
                             </formats>
+                            
                         </configuration>
                     </plugin>
                     <plugin>
